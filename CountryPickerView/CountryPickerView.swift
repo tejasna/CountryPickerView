@@ -95,10 +95,6 @@ public class CountryPickerView: NibView {
         didSet { setup() }
     }
     
-    public var flagSize = CGSize(width: 20.0, height: 20.0) {
-        didSet { setup() }
-    }
-    
     /// The spacing between the flag image and the text.
     public var flagSpacingInView: CGFloat {
         get {
@@ -136,7 +132,6 @@ public class CountryPickerView: NibView {
     }
     
     func setup() {
-        flagImageView.frame.size = flagSize
         flagImageView.image = selectedCountry.flag
         countryDetailsLabel.font = font
         countryDetailsLabel.textColor = textColor
